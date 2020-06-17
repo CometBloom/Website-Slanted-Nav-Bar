@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="Vendors/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="Vendors/css/2015-03-25_13-52-05__grid.css">
+        <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <script src= "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            var Snd = new Audio("Resources/js/DeNovo.mp3"); 
+        </script>
+        <script>
+            var navButton = document.querySelector('.navigation-button');
+            var navMenu = document.querySelector('.navigation-menu');
+            var win = window;
+
+            function openMenu(event) {
+  
+                navButton.classList.toggle('active');
+                navMenu.classList.toggle('active');
+
+                event.preventDefault();
+                event.stopImmediatePropagation();
+            }
+  
+            function closeMenu(event) {
+                if (navButton.classList.contains('active')) {
+                    navButton.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    }
+                }
+            navButton.addEventListener('click', openMenu, false);
+            win.addEventListener('click',closeMenu, false);
+        </script>
+
+        <title>De Novo Dietetics</title>
+        
+    </head>
+    <body>
+            <nav>
+                <div class="row">
+                    <img src="Resources/img/DeNovoTranspa.png" alt="DND Logo" class="logo">
+                    <div class="navigation-wrapper">
+                        <div class="navigation-button">
+                            <i class="fa fa-bars"></i>
+                        </div> 
+                        <div class="navigation-menu">
+                            <ul>
+                                <li><a href="">HOME</a></li>
+                                <li><a href="">ABOUT</a></li>
+                                <li><a href="">SERVICES</a></li>
+                                <li><a href="">DIGITAL PROGRAMS</a></li>
+                                <li><a href="">NUTRITION ASSESSMENT</a></li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+            </nav>
+            
+            <div class="hero-text-box">
+                <h1>de no·vo<br></h1>
+                <h2>/dā ˈnōvō,di/</h2>
+                <h3><em>adverb · adjective</em></h3>
+                <h4>Starting from the beginning; anew</h4>
+                <div class="speaker">
+                    <a href='' class="sound"><i class="fa fa-volume-up" aria-hidden="true"></i></a>
+                        <audio id= "Snd" src="Resources/js/DeNovo.mp3" preload="auto"></audio>
+                        <button id="speakerbtn" onclick="document.getElementById('Snd').play();"></button>
+                </div>
+            </div>
+            <div class="wrapper">
+              
+                <div class="btn">
+                    <div class="pulsingbtn"></div>
+                    <button type="button">Begin</button>
+                </div>
+            
+            </div>
+    
+    </body>
+
+    
+</html>
